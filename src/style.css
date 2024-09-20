@@ -1,0 +1,157 @@
+:root {
+  --primary-color: #4a90e2;
+  --secondary-color: #f5f5f5;
+  --text-color: #333;
+  --border-color: #ddd;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--secondary-color);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.main-content {
+  display: flex;
+  gap: 20px;
+}
+
+.left-panel, .right-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+.btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #3a80d2;
+}
+
+.select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 10px;
+}
+
+.option-group, .checkbox-group {
+  margin-bottom: 15px;
+}
+
+.checkbox-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#file-list {
+  margin-top: 15px;
+}
+
+#file-list div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.output-container {
+  background-color: #f8f8f8;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 15px;
+  min-height: 200px;
+  white-space: pre-wrap;
+  font-family: monospace;
+  overflow-y: auto;
+}
+
+#code-editor {
+  width: 100%;
+  height: 300px;
+  resize: vertical;
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+#file-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.file-tab {
+  background-color: #f0f0f0;
+  border: 1px solid var(--border-color);
+  border-radius: 4px 4px 0 0;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.file-tab:hover {
+  background-color: #e0e0e0;
+}
+
+.file-tab.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+}
+
+.button-group {
+  margin-bottom: 10px;
+}
+
+.button-group .btn {
+  margin-right: 10px;
+}
